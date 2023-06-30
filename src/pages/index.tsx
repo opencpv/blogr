@@ -11,7 +11,7 @@ interface linksProps {
 
 export default function Home({ socialLinks, postPreviews }: linksProps) {
   return (
-    <main className="w-full h-[100vh] bg-white">
+    <main className="w-full  bg-white">
       <Navbar socialLinks={socialLinks} />
       <LandingSlider postPreviews={postPreviews} />
       <Footer socialLinks={socialLinks} />
@@ -31,7 +31,7 @@ export const getStaticProps = async () => {
     const postQuery = `*[_type == "post"]{
       _id,
       title, 
-      author->{name},
+      author->{name, position, user->{profileImage}},
       categories[]->{name},
       slug,
       except,

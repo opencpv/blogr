@@ -11,9 +11,9 @@ interface linksProps {
 
 const Footer = ({ socialLinks }: linksProps) => {
   return (
-    <footer>
+    <footer className="bg-white">
       <Container>
-        <div className="flex gap-2 justify-center mb-2 ">
+        <div className="flex gap-2 justify-center mb-2 mt-8 ">
           {socialLinks.map((item, index) => (
             <SocialIcon
               key={index}

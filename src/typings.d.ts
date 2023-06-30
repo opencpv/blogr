@@ -14,6 +14,16 @@ export interface postPreview {
   title: string;
   author: {
     name: string;
+    position: string;
+    user: {
+      profileImage: {
+        asset: {
+          _ref: string;
+          _type: string;
+        };
+        _type: string;
+      };
+    };
   };
   categories: categories[];
   _createdAt: string;
@@ -34,4 +44,12 @@ export interface CustomImageProps {
   alt: string;
   sizeStyle: string;
   roundedStyle?: string;
+}
+
+interface customSwiperProps {
+  children: React.ReactNode;
+  spaceBetween?: number;
+  slidesPerView?: number;
+  onSlideChange?: any;
+  data: Array<postPreview>;
 }
