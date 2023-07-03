@@ -14,7 +14,7 @@ export default function Home({ socialLinks, postPreviews }: linksProps) {
     <main className="w-full  bg-white">
       <Navbar socialLinks={socialLinks} />
       <LandingSlider postPreviews={postPreviews} />
-      <Footer socialLinks={socialLinks} />
+      `` <Footer socialLinks={socialLinks} />
     </main>
   );
 }
